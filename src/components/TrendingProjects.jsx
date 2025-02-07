@@ -73,11 +73,11 @@ const TrendingProjects = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       <Slider {...sliderSettings}>
         {cards.map((card) => (
           <div key={card.id} className="p-2 sm:p-1">
-            <div className="bg-white shadow-md rounded-md overflow-hidden relative scale-95 md:scale-90 sm:max-w-[250px] mx-auto transition-transform">
+            <div className="bg-white shadow-md rounded-md overflow-hidden relative scale-95 md:scale-90  md:max-w-[350px] mx-auto transition-transform">
               <img
                 src={card.image}
                 alt={card.name}
@@ -118,12 +118,6 @@ const TrendingProjects = () => {
         ))}
       </Slider>
 
-      {/* <div className="flex justify-center mt-6">
-        <button className="flex items-center gap-2 px-4 py-2 rounded-full text-white font-semibold text-sm md:text-lg transition-all hover:scale-105 shadow-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-          See More
-          <FontAwesomeIcon icon={faArrowRight} className="ml-1 text-lg" />
-        </button>
-      </div> */}
     </div>
   );
 };

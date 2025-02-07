@@ -7,7 +7,7 @@ import DSNavbar from '../components/DSNavbar'
 const DSProducts = () => {
   return (
     <>
-    <div className='bg-gray-100 max-w-3xl mx-auto'>
+    <div className='bg-gray-100 max-w-5xl mx-auto'>
     <DSNavbar />
     <DSproductPage />
     

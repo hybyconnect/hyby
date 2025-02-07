@@ -35,28 +35,12 @@ const Home = () => {
             scrollbarWidth: "none", // Firefox
           }}
         >
-          {/* <div className="flex gap-4 p-4 w-full">
-            {languages.map((lang, index) => (
-              <div
-                key={index}
-                onClick={() => setSelected(lang.name)}
-                className={`flex justify-center p-2 items-center w-16 h-12 md:w-20 md:h-20 rounded-full cursor-pointer transition-all duration-300 transform hover:scale-110 ${
-                  selected === lang.name
-                    ? "bg-gray-800 text-white"
-                    : "bg-white text-gray-800"
-                }`}
-              >
-                <span className="text-xs sm:text-sm md:text-lg font-semibold">
-                  {lang.nativeName}
-                </span>
-              </div>
-            ))}
-          </div> */}
+          
         </div>
       </div>
       <section className="p-4 bg-gradient-to-b from-gray-100 to-purple-100">
         
-        <div className=" max-w-2xl mx-auto">
+        <div className=" max-w-4xl mx-auto">
           <style>
             {`
               .slick-dots {
@@ -69,7 +53,7 @@ const Home = () => {
           </style>
           <Slider {...sliderSettings}>
             {/* Slide 1 */}
-            <div className="p-4 flex justify-center to-purple-100">
+            <div className=" p-2 flex justify-center to-purple-100">
               <img
                 src={assets.software2}
                 className="w-full rounded-lg text-center"
@@ -77,7 +61,7 @@ const Home = () => {
               />
             </div>
             {/* Slide 2 */}
-            <div className="p-4 flex justify-center">
+            <div className="p-2  flex justify-center">
               <img
                 src={assets.software2}
                 className="w-full rounded-lg"
@@ -85,7 +69,7 @@ const Home = () => {
               />
             </div>
             {/* Slide 3 */}
-            <div className="p-4 flex justify-center">
+            <div className="p-2 flex justify-center">
               <img
                 src={assets.software2}
                 className="w-full rounded-lg"
@@ -93,7 +77,7 @@ const Home = () => {
               />
             </div>
             {/* Slide 4 */}
-            <div className="p-4 flex justify-center bg-gradient-b to-purple-100">
+            <div className="p-2 flex justify-center bg-gradient-b to-purple-100">
               <img
                 src={assets.software2}
                 className="w-full rounded-lg text-center"
@@ -101,7 +85,7 @@ const Home = () => {
               />
             </div>
             {/* Slide 5 */}
-            <div className="p-4 flex justify-center">
+            <div className="p-2 flex justify-center">
               <img
                 src={assets.software2}
                 className="w-full rounded-lg"
@@ -109,7 +93,7 @@ const Home = () => {
               />
             </div>
             {/* Slide 6 */}
-            <div className="p-4 flex justify-center">
+            <div className="p-2 flex justify-center">
               <img
                 src={assets.software2}
                 className="w-full rounded-lg"

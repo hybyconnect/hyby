@@ -17,7 +17,7 @@ const DSMainContent = () => {
     
     
     <div className="bg-gradient-to-b from-purple-100 via-white to-purple-100 min-h-screen no-scrollbar scroll-smooth flex flex-col items-center overflow-x-hidden">
-      <div className="container mx-auto max-w-3xl">
+      <div className="container mx-auto max-w-5xl">
         <DSNavbar />
         <Routes>
           <Route path="/" element={<DSHome />} />

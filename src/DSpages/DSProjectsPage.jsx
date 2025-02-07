@@ -109,7 +109,7 @@ const DSProjectsPage = () => {
 
   return (
     <>
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <DSNavbar />
         <div className="bg-yellow-400 h-[7rem] p-4 rounded-t-lg">
           <h2 className="text-2xl m-2 font-semibold"> <span className="text-xl">You Have</span> <br /> {orders.length} Orders Total</h2>

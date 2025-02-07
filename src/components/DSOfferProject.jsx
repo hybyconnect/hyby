@@ -79,7 +79,7 @@ const DSOfferProject = () => {
       <Slider {...sliderSettings}>
         {serviceOffers.map((card) => (
           <div key={card.id} className="p-2 m-1">
-            <div className="bg-white shadow-md rounded-md overflow-hidden relative transition-transform">
+            <div className="bg-white   shadow-md rounded-md overflow-hidden relative transition-transform">
               {/* Discount Badge */}
               <div className="absolute top-2 right-2 bg-red-500 text-white text-sm font-bold px-2 py-1 rounded-md">
                 {card.discount}
@@ -144,13 +144,13 @@ const DSOfferProject = () => {
                 <div className="flex justify-between mb-2 mt-4">
                   <button
                     onClick={() => navigate("/DS-Products")} // Navigate to DS-Product
-                    className="px-4 py-2 text-white bg-green-500 rounded-full font-semibold hover:bg-green-600"
+                    className="px-4 w-2/4 md:w-2/4 py-2 text-white bg-green-500 rounded-full font-semibold hover:bg-green-600"
                   >
                     View
                   </button>
                   <button
                     onClick={() => toggleSelect(card.id)}
-                    className={`px-4 py-2 text-green-600 border border-green-600 font-semibold rounded-full transition-all ${
+                    className={`px-4 py-2 text-green-600 md:w-1/4 border border-green-600 font-semibold rounded-full transition-all ${
                       selectedCards[card.id]
                         ? "bg-green-600 text-white"
                         : "hover:bg-green-500 hover:text-white"
