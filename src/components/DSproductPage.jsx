@@ -41,13 +41,13 @@ const navigate = useNavigate(); // Initialize navigate
                 className="h-56 flex justify-between items-end p-5 bg-cover bg-center"
                 style={{ backgroundImage: `url(${assets.mawlanding})` }}
               >
-                <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">
+                <h1 className="text-3xl md:text-3xl  lg:text-4xl font-bold text-gray-800">
                   Creative Landing Page
                 </h1>
                 {/* Bookmark Button */}
                 <button
                   onClick={toggleBookmark}
-                  className="text-yellow-500 px-1 text-[18px] lg:text-sm mr-1 focus:outline-none"
+                  className="text-yellow-500 px-1 text-sm md:text-md lg:text-md mr-1 focus:outline-none"
                 >
                   <FontAwesomeIcon
                     icon={isBookmarked ? solidBookmark : regularBookmark}
@@ -57,7 +57,7 @@ const navigate = useNavigate(); // Initialize navigate
               </div>
 
               <div className="p-4">
-                <p className="text-md text-gray-600 mt-0">
+                <p className=" text-md md:text-md text-gray-600 mt-0">
                   Develop responsive WordPress websites and redesign them using
                   <span className="font-bold text-indigo-600"> HTML, CSS, JS</span>.
                 </p>
@@ -87,7 +87,7 @@ const navigate = useNavigate(); // Initialize navigate
                   ))}
                 </div>
 
-                <h2 className="text-lg font-semibold mt-4">What You Will Get:</h2>
+                <h2 className="text-lg md:text-lg font-semibold mt-4">What You Will Get:</h2>
                 <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
                   <li>WordPress Installation and Setup</li>
                   <li>Premium Theme</li>

@@ -119,7 +119,7 @@ const DSProjectsPage = () => {
         {/* Ongoing Projects */}
         <div className="mt-4 bg-gray-100">
           <h3 className="text-xl px-4 md:text-2xl font-semibold">Ongoing ({ongoingOrders.length})</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
             {ongoingOrders.map((order) => (
               <div key={order.id} className="bg-white shadow-lg rounded-2xl p-6 flex flex-col transform transition-transform hover:scale-105">
                 <img
@@ -128,7 +128,7 @@ const DSProjectsPage = () => {
                   className="w-full h-40 object-cover mb-4 rounded-xl"
                 />
                 <div>
-                  <h4 className="font-semibold text-lg">{order.title}</h4>
+                  <h4 className="font-semibold text-md md:text-lg">{order.title}</h4>
                   <p className="text-gray-600 text-base mt-2">{order.details}</p>
                   <div className="mt-4 flex items-center">
                     {order.status === "Pending" && !order.paymentReceived && (
@@ -171,7 +171,7 @@ const DSProjectsPage = () => {
         {/* Completed Projects */}
         <div className="mt-8 bg-gray-100 py-4">
           <h3 className="text-xl px-4 md:text-2xl font-semibold">Completed ({completedOrders.length})</h3>
-          <div className="grid grid-rows-auto gap-4 mt-4">
+          <div className="grid grid-rows-auto gap-4 md:mx-6 mt-4">
             {completedOrders.map((order) => (
               <div key={order.id} className="bg-white shadow rounded-2xl  p-4 flex flex-col">
                 <img
@@ -180,7 +180,7 @@ const DSProjectsPage = () => {
                   className="w-full h-[250px] object-cover mb-2 rounded-md"
                 />
                 <div>
-                  <h4 className="font-semibold text-md md:text-lg">{order.title}</h4>
+                  <h4 className="font-semibold text-md md:text-xl">{order.title}</h4>
                   <p className="text-gray-600 text-sm mt-2">{order.details}</p>
                   {order.feedback && (
                     <p className="text-green-500 mt-2">Feedback Given</p>

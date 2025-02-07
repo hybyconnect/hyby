@@ -1,12 +1,15 @@
 import React from 'react'
 import DSNavbar from '../components/DSNavbar'
 import DSFooter from '../components/DSFooter'
-import Cart from '../components/Cart'
+
 
 const DSCart = () => {
+ 
+
   return (
     <div className='max-w-3xl mx-auto'><DSNavbar />
-    {/* <Cart selectedProjects={selectedProjects} /> */}
+    <h1 className='text-3xl text-red-500 p-6'>Under Development</h1>
+    
     <DSFooter />
 
     </div>

@@ -123,7 +123,7 @@ const Service = () => {
     switch (activeTab) {
       case "Web Development":
         return (
-          <div className=" flex flex-wrap justify-center flex-col gap-5">
+          <div className=" flex flex-wrap justify-center flex-col gap-4">
             {projects.map((project) => (
               <div
                 key={project.id}
@@ -136,7 +136,7 @@ const Service = () => {
                   className="absolute top-3 left-3 text-yellow-500 text-xl cursor-pointer"
                 />
 
-                <div className="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 text-sm font-semibold rounded-lg">
+                <div className="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 text-sm md:text-md font-semibold rounded-lg">
                   <FontAwesomeIcon icon={faTag} className="mr-1" /> {project.price}
                 </div>
 
@@ -147,20 +147,20 @@ const Service = () => {
                 />
 
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-                  <p className="text-pink-600 font-medium text-sm mb-4">
+                  <h3 className="text-lg md:text-xl font-semibold mb-2">{project.name}</h3>
+                  <p className="text-pink-600 font-medium text-sm md:text-sm mb-4">
                     {project.category}
                   </p>
 
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between gap-4 md:gap-4 items-center">
                     <button
                     onClick={() => navigate("/DS-Products")}
-                    className="px-4 py-2 w-[175px] bg-green-500 text-white font-semibold rounded-full shadow hover:bg-green-600">
+                    className="px-4 py-2 w-[165px] md:w-[175px] bg-green-500 text-white text-sm md:text-lg font-semibold rounded-full shadow hover:bg-green-600">
                       View
                     </button>
                     <button
                       onClick={() => toggleSelectProject(project.id)}
-                      className={`px-4 py-2 w-[175px] border-2 font-semibold rounded-full transition ${
+                      className={`px-4 py-2 w-[165px] md:w-[175px] text-sm md:text-lg border-2 font-semibold rounded-full transition ${
                         selectedProjects.includes(project.id)
                           ? "bg-green-500 text-white"
                           : "border-green-500 text-green-600 hover:bg-green-500 hover:text-white"
