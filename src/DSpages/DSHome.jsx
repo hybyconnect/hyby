@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import assets from "../assets/assets";
+import TestComponent from "../components/TestComponent";
 
 import TrendingProjects from "../components/TrendingProjects";
 
@@ -104,10 +105,11 @@ const Home = () => {
         </div>
       </section>
       <div className=" bg-gradient-to-b from-gray-100 to mb-40">
-        <h1 className="text-2xl md:text-3xl px-4 text-center font-semibold flex justify-start mt-4">Recent Projects</h1>
-        <TrendingProjects />
+        {/* <h1 className="text-2xl md:text-3xl px-4 text-center font-semibold flex justify-start mt-4">Recent Projects</h1> */}
+        {/* <TrendingProjects />
         
-        <Service />
+        <Service /> */}
+        <TestComponent />
         
       </div>
     </div>

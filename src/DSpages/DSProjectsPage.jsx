@@ -109,17 +109,17 @@ const DSProjectsPage = () => {
 
   return (
     <>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto bg-gray-100 ">
         <DSNavbar />
-        <div className="bg-yellow-400 h-[7rem] p-4 rounded-t-lg">
+        <div className="bg-yellow-400 h-[7rem] justify-between flex p-4 rounded-t-lg">
           <h2 className="text-2xl m-2 font-semibold"> <span className="text-xl">You Have</span> <br /> {orders.length} Orders Total</h2>
-          <img src="" alt="" />
+          <img src={assets.robot} alt="" />
         </div>
 
         {/* Ongoing Projects */}
         <div className="mt-4 bg-gray-100">
-          <h3 className="text-xl px-4 md:text-2xl font-semibold">Ongoing ({ongoingOrders.length})</h3>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+          <h3 className="text-xl px-4 md:text-2xl bg-gray font-semibold">Ongoing ({ongoingOrders.length})</h3>
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 m-4">
             {ongoingOrders.map((order) => (
               <div key={order.id} className="bg-white shadow-lg rounded-2xl p-6 flex flex-col transform transition-transform hover:scale-105">
                 <img
@@ -169,9 +169,9 @@ const DSProjectsPage = () => {
         </div>
 
         {/* Completed Projects */}
-        <div className="mt-8 bg-gray-100 py-4">
+        <div className="mt-8 bg-gray-100 ml-2 py-4">
           <h3 className="text-xl px-4 md:text-2xl font-semibold">Completed ({completedOrders.length})</h3>
-          <div className="grid grid-rows-auto gap-4 md:mx-6 mt-4">
+          <div className="grid grid-rows-auto gap-4 md:mx-6 m-4">
             {completedOrders.map((order) => (
               <div key={order.id} className="bg-white shadow rounded-2xl  p-4 flex flex-col">
                 <img

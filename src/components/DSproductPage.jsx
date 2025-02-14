@@ -112,7 +112,7 @@ const navigate = useNavigate(); // Initialize navigate
           </div>
         </div>
       </div>
-      <div className="py-10 bg-gray-100"></div>
+      {/* <div className="py-10 bg-gray-100"></div> */}
     </div>
     
   );

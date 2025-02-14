@@ -27,7 +27,8 @@ import mawcare from './mawcare.png';
 import mawlanding from './mawlanding.png';
 import mawlanding2 from './mawlanding2.png';
 import emailEnv from './emailEnv.png';
-
+import percent from './percent.png';
+import robot from './robot.png';
 
 const assets = {
     influencer1,
@@ -59,6 +60,8 @@ const assets = {
     mawlanding,
     mawlanding2,
     emailEnv,
+    percent,
+    robot,
 
 };
 
