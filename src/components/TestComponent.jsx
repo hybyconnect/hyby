@@ -146,12 +146,6 @@ const Service = () => {
                     {card.category}
                   </p>
                   <div className="flex justify-center items-center gap-4 mt-4">
-                    {/* <button
-                      onClick={() => navigate("/DS-Products")}
-                      className="px-4 py-2 bg-green-500 text-white text-sm font-semibold rounded-full shadow hover:bg-green-600"
-                    >
-                      View
-                    </button> */}
                     <button
                       onClick={() => toggleSelectProject(card)}
                       className={`px-4 py-2 text-sm border-2 w-full font-semibold rounded-full transition ${
@@ -172,18 +166,20 @@ const Service = () => {
 
       {/* Tabs for project categories */}
       <h2 className="text-xl md:text-2xl font-bold ml-2 mt-8 mb-6">Creative Service Projects</h2>
-      <div className="flex space-x-4  mb-6">
-        {tabs.map((tab) => (
-          <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 rounded-lg flex text-sm md:text-md justify-between font-semibold ${
-              activeTab === tab ? "bg-gray-400 text-black" : "bg-gray-200 text-gray-600"
-            }`}
-          >
-            {tab}
-          </button>
-        ))}
+      <div className="overflow-x-auto whitespace-nowrap mb-6">
+        <div className="flex space-x-4">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-4 py-2 rounded-lg flex text-sm md:text-md justify-between font-semibold ${
+                activeTab === tab ? "bg-gray-400 text-black" : "bg-gray-200 text-gray-600"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Render selected project tab */}
