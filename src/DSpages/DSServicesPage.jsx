@@ -87,7 +87,7 @@ const DSServicesPage = () => {
               <p className="text-gray-800">{service.description}</p>
               <Link
                 to="/digital-services"
-                className="inline-block mt-4 bg-yellow-400 text-white font-bold py-2 px-4 rounded hover:bg-green-600 transition-all duration-300"
+                className="inline-block mt-4 bg-yellow-400 text-white font-bold py-2 px-4 rounded hover:bg-yellow-600 transition-all duration-300"
               >
                 Know More
               </Link>
@@ -104,7 +104,7 @@ const DSServicesPage = () => {
         <p className="text-gray-900 mb-8 text-2xl">
           Get started with our services today and watch your business grow!
         </p>
-        <Link to={"/contact"}>
+        <Link to={"/DSContact"}>
           <button className="bg-yellow-500 my-4 text-white font-bold text-lg py-3 px-8 rounded-full hover:from-[#f7ff80] hover:to-[#f7ff80] transition-all duration-300 transform hover:scale-105">
             Let's Start
           </button>
