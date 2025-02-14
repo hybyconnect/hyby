@@ -152,9 +152,13 @@ const DSproductPage = () => {
               </svg>
             </button>
           </div>
+          
         </div>
       )}
+      <div className="py-10 bg-gray-100"></div>
     </div>
+    
+
   );
 };
 

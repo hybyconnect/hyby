@@ -17,13 +17,15 @@ import DSproductPage from "./components/DSproductPage";
 import DSProducts from "./DSpages/DSProducts";
 import DSProjectsPage from "./DSpages/DSProjectsPage";
 import DScheckout from "./DSpages/DScheckout";
-import DSNotification from "./DSpages/DSNotification";
+import DSNotification from "./DSpages/DSServicesPage";
 import DSPaymentOption from "./DSpages/DSPaymentOption";
 import DSPaymentDone from "./DSpages/DSPaymentDone";
 import DSCardDetails from "./DSpages/DSCardDetails";
 import DSNetBankingOpt from "./DSpages/DSNetBankingOpt";
 import DSUpiOption from "./DSpages/DSUpiOption";
 import DSCart from "./DSpages/DSCart";
+import DSContactUs from "./DSpages/DSContactUs";
+import DSServicesPage from "./DSpages/DSServicesPage";
 
 
 // LoadingScreen Component: Displayed while the app is loading
@@ -84,13 +86,15 @@ const App = () => {
           <Route path="/DS-Products" element={<DSProducts />} />
           <Route path="/DSprojects" element={<DSProjectsPage />} />
           <Route path="/DS-Checkout" element={<DScheckout />} />
-          <Route path="/DSNotifications" element={<DSNotification />} />
+          <Route path="/DSServices" element={<DSServicesPage />} />
           <Route path="/DSPaymentOption" element={<DSPaymentOption />} />
           <Route path="/DSPaymentDone" element={<DSPaymentDone />} />
           <Route path="/DSCardDetails" element={<DSCardDetails />} />
           <Route path="/NetbankingOption" element={<DSNetBankingOpt />} />
           <Route path="/UpiOption" element={<DSUpiOption />} />
           <Route path="/dscart" element={<DSCart />} />
+          <Route path="/DSContact" element={<DSContactUs />} />
+          
 
         </Routes>
       )}

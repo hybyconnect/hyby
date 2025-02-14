@@ -15,8 +15,8 @@ const Footer = () => {
     { name: "HOME", icon: "fa-home", path: "/digital-services" },
     { name: "PROJECTS", icon: "fa-chart-bar", path: "/DSProjects" },
     { name: "OFFER", icon: "fa-percent", path: "/DSoffer" },
-    { name: "NOTIFICATION", icon: "fa-bell", path: "/DSNotifications" },
-    { name: isLoggedIn ? "PROFILE" : "LOGIN", icon: "fa-user", path: isLoggedIn ? "/profile" : "/login" },
+    { name: "SERVICES", icon: "fa-cogs", path: "/DSServices" },
+    { name: "CONTACT", icon: "fa-phone", path: "/DSContact" },
   ];
 
   const handleSelect = (path) => {

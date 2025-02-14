@@ -3,11 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import assets from "../assets/assets";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 const DSOfferProject = () => {
-  const [selectedCards, setSelectedCards] = useState({});
-  const navigate = useNavigate(); // Initialize navigate
+  const [selectedOffers, setSelectedOffers] = useState([]);
+  const navigate = useNavigate();
 
   const serviceOffers = [
     {
@@ -66,21 +66,24 @@ const DSOfferProject = () => {
     ],
   };
 
-  const toggleSelect = (id) => {
-    setSelectedCards((prev) => ({ ...prev, [id]: !prev[id] }));
+  const toggleSelect = (offer) => {
+    setSelectedOffers((prev) =>
+      prev.find((item) => item.id === offer.id)
+        ? prev.filter((item) => item.id !== offer.id)
+        : [...prev, offer]
+    );
   };
 
   return (
     <div className="max-w-5xl mx-auto bg-gray-100 ">
       {/* Service Offers Section */}
-      <h2 className="text-xl  font-bold text-center my-4">
+      <h2 className="text-xl font-bold text-center my-4">
         Offers On Our Services
       </h2>
       <Slider {...sliderSettings}>
         {serviceOffers.map((card) => (
           <div key={card.id} className="p-2 m-1">
-            <div className="bg-white   shadow-md rounded-md overflow-hidden relative transition-transform">
-              {/* Discount Badge */}
+            <div className="bg-white shadow-md rounded-md overflow-hidden relative transition-transform">
               <div className="absolute top-2 right-2 bg-red-500 text-white text-sm font-bold px-2 py-1 rounded-md">
                 {card.discount}
               </div>
@@ -92,16 +95,25 @@ const DSOfferProject = () => {
               <div className="p-2">
                 <h3 className="text-lg font-semibold">{card.name}</h3>
                 <p className="text-sm text-gray-600">{card.category}</p>
-                <button
-                  onClick={() => toggleSelect(card.id)}
-                  className={`px-4 py-2 w-full mt-2 text-green-600 border border-green-600 font-semibold rounded-full transition-all ${
-                    selectedCards[card.id]
-                      ? "bg-green-600 text-white"
-                      : "hover:bg-green-500 hover:text-white"
-                  }`}
-                >
-                  {selectedCards[card.id] ? "Selected" : "Select"}
-                </button>
+                
+                <div className="flex justify-between gap-2 mt-2">
+                  <button
+                    onClick={() => navigate("/DS-Products")}
+                    className="px-4 py-2 bg-green-500 text-white text-sm font-semibold rounded-full shadow hover:bg-green-600"
+                  >
+                    View
+                  </button>
+                  <button
+                    onClick={() => toggleSelect(card)}
+                    className={`px-4 py-2 text-sm border-2 font-semibold rounded-full transition ${
+                      selectedOffers.find((item) => item.id === card.id)
+                        ? "bg-green-500 text-white"
+                        : "border-green-500 text-green-600 hover:bg-green-500 hover:text-white"
+                    }`}
+                  >
+                    {selectedOffers.find((item) => item.id === card.id) ? "Selected" : "Select"}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -116,7 +128,6 @@ const DSOfferProject = () => {
         {templateOffers.map((card) => (
           <div key={card.id} className="p-4">
             <div className="bg-white shadow-md rounded-md overflow-hidden relative transition-transform">
-              {/* Discount Badge */}
               <div className="absolute top-2 right-2 bg-red-500 text-white text-sm font-bold px-2 py-1 rounded-md">
                 {card.discount}
               </div>
@@ -141,22 +152,22 @@ const DSOfferProject = () => {
                   {card.offerExpiry}
                 </p>
 
-                <div className="flex justify-between mb-2 mt-4">
+                <div className="flex justify-between gap-2 mt-4">
                   <button
-                    onClick={() => navigate("/DS-Products")} // Navigate to DS-Product
-                    className="px-4 w-2/4 md:w-2/4 py-2 text-white bg-green-500 rounded-full font-semibold hover:bg-green-600"
+                    onClick={() => navigate("/DS-Products")}
+                    className="px-4 py-2 bg-green-500 text-white text-sm font-semibold rounded-full shadow hover:bg-green-600"
                   >
                     View
                   </button>
                   <button
-                    onClick={() => toggleSelect(card.id)}
-                    className={`px-4 py-2 text-green-600 md:w-1/4 border border-green-600 font-semibold rounded-full transition-all ${
-                      selectedCards[card.id]
-                        ? "bg-green-600 text-white"
-                        : "hover:bg-green-500 hover:text-white"
+                    onClick={() => toggleSelect(card)}
+                    className={`px-4 py-2 text-sm border-2 font-semibold rounded-full transition ${
+                      selectedOffers.find((item) => item.id === card.id)
+                        ? "bg-green-500 text-white"
+                        : "border-green-500 text-green-600 hover:bg-green-500 hover:text-white"
                     }`}
                   >
-                    {selectedCards[card.id] ? "Selected" : "Select"}
+                    {selectedOffers.find((item) => item.id === card.id) ? "Selected" : "Select"}
                   </button>
                 </div>
               </div>
@@ -164,6 +175,22 @@ const DSOfferProject = () => {
           </div>
         ))}
       </Slider>
+
+      {/* Cart Preview */}
+      {selectedOffers.length > 0 && (
+        <div className="fixed bottom-14 left-0 right-0 bg-yellow-200 shadow-lg p-4 z-50 flex justify-between items-center max-w-3xl mx-auto rounded-t-lg">
+          <div className="text-pink-600 font-semibold">
+            {selectedOffers.map((offer) => offer.name).join(", ")}
+          </div>
+          <button
+            onClick={() => navigate("/checkout")}
+            className="px-4 py-2 bg-green-500 text-white text-sm md:text-md font-semibold rounded-lg shadow hover:bg-green-600"
+          >
+            View Cart ({selectedOffers.length} Items)
+          </button>
+        </div>
+      )}
+
       <div className=" bg-gray-100"></div>
     </div>
   );
