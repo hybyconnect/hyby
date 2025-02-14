@@ -156,6 +156,13 @@ const Service = () => {
                     >
                       {selectedProjects.find((item) => item.id === card.id) ? "Selected" : "Select"}
                     </button>
+                    <button
+                      onClick={() => navigate("/DS-Products")}
+                      className="px-4 py-2 bg-green-500 text-white text-sm font-semibold rounded-full shadow hover:bg-green-600"
+                    >
+                      View
+                    </button>
+                    
                   </div>
                 </div>
               </div>
