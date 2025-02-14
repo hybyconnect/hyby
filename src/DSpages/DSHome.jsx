@@ -39,7 +39,7 @@ const Home = () => {
           
         </div>
       </div>
-      <section className="p-4 bg-gradient-to-b from-gray-100 to-purple-100">
+      <section className="p-4 bg-gradient-to-b from-gray-100 to-gray-100">
         
         <div className=" max-w-4xl mx-auto">
           <style>
