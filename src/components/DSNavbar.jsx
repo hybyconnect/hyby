@@ -17,7 +17,7 @@ const DSNavbar = () => {
                 <div className="flex items-center bg-white rounded-full shadow-sm px-4 py-2 w-full max-w-md">
                     <input
                         type="text"
-                        placeholder="Search Best Influencer Or More"
+                        placeholder="Search Best Digital Services And More"
                         className="flex-grow outline-none text-gray-600 text-sm placeholder-gray-400"
                     />
                     <button className="text-yellow-500">
