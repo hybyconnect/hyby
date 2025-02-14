@@ -53,7 +53,7 @@ const DSNotification = () => {
     <div className="max-w-5xl mx-auto">
       <DSNavbar />
       <section className="flex items-center justify-center py-16 px-8 md:px-12 bg-gradient-to-br from-gray-100 via-white to-gray-100 text-black h-[130vh] md:h-[80vh]">
-      <div className="max-w-4xl w-full text-center p-8 bg-gradient-to-b from-green-200 to-white rounded-lg shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+      <div className="max-w-4xl w-full text-center p-8 bg-gradient-to-b from-gray-200 to-gray-100 rounded-lg shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
         <h2 className="text-4xl font-extrabold mb-6 text-transparent bg-clip-text bg-yellow-500">
           Get in Touch
         </h2>

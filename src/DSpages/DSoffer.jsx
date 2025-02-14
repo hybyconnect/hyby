@@ -28,8 +28,8 @@ const Share = () => {
         <DSOfferProject />
         <DSproductPage />
         {/* <TestComponent /> */}
-        <DSFooter />
         
+        <DSFooter />  
         
         
         
