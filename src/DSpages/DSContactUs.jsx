@@ -119,13 +119,14 @@ const DSNotification = () => {
 
           <button
             type="submit"
-            className="bg-yellow-400 text-white-300 px-6 py-3 rounded-md shadow-md hover:bg-gray-800 transform transition-all duration-300 hover:scale-105 font-semibold"
+            className="bg-yellow-400 text-white-300  px-6 py-3 rounded-md shadow-md hover:bg-gray-800 transform transition-all duration-300 hover:scale-105 font-semibold"
           >
             Send Message
           </button>
         </form>
       </div>
     </section>
+    <div className="py-10 bg-gray-100"></div>
       <DSFooter />
     </div>
   );

@@ -79,18 +79,18 @@ const Footer = () => {
               ×
             </button>
             <div className="flex justify-center items-center  flex-col">
-            <h2 className=" text-xl md:text-2xl font-bold pt-8 mb-4">Get More</h2>
-            <Link to={"/digital-services"} className="text-lg md:text-xl font-semibold mb-2">Home</Link>
-            <Link to={"/DSProjects"} className="text-lg md:text-xl font-semibold mb-2">Projects</Link>
-            <Link to={"/DSoffer"} className="text-lg md:text-xl font-semibold mb-2">Offer</Link>
-            <Link to={"/DSServices"} className="text-lg md:text-xl font-semibold mb-2">Services</Link>
+            <h2 className=" text-xl md:text-2xl text-yellow-500 font-bold pt-8 mb-4">Get More</h2>
+            <Link to={"/digital-services"} className="text-lg md:text-xl font-semibold hover:text-yellow-500 mb-2">Home</Link>
+            <Link to={"/DSProjects"} className="text-lg md:text-xl font-semibold hover:text-yellow-500 mb-2">Projects</Link>
+            <Link to={"/DSoffer"} className="text-lg md:text-xl font-semibold hover:text-yellow-500 mb-2">Offer</Link>
+            <Link to={"/DSServices"} className="text-lg md:text-xl font-semibold hover:text-yellow-500 mb-2">Services</Link>
             
             <ul className=" text-lg text-center pt-16">
-              <li>About Us</li>
-              <li>Contact Us</li>
-              <li> <u>Term and Conditions </u></li>
-              <li><u>Privacy Policy </u> </li>
-              <li>Career</li>
+              <li className="hover:text-yellow-500">About Us</li>
+              <li className="cursor-pointer hover:text-yellow-500"><a href="/DSContact">Contact Us</a></li>
+              <li className="hover:text-yellow-500"> <u>Term and Conditions </u></li>
+              <li className="hover:text-yellow-500"><u>Privacy Policy </u> </li>
+              <li className="hover:text-yellow-500">Career</li>
             </ul>
             </div>
           </div>

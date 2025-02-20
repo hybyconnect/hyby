@@ -3,19 +3,22 @@ import DSFooter from "../components/DSFooter";
 import DSNavbar from "../components/DSNavbar";
 import { Link } from "react-router-dom";
 import assets from "../assets/assets";
+import TrendingProjects from "../components/TrendingProjects";
 
-const DSServicesPage = () => {
+const DSGraphicDesign = () => {
   return (
     <div className="max-w-5xl mx-auto">
       <DSNavbar />
       <div className="h-[150px] p-2 flex justify-between bg-gray-100 shadow-md rounded  bg-yellow-400">
-          <h2 className="text-white p-2"><span className="text-white p-2 text-bold text-3xl md:text-5xl">Our Services</span> <br /> <span className=" text-black text-bold p-4">We Provide <br />  </span> <span className="text-white p-4 text-bold text-md md:text-xl">Innovative Digital Solutions</span></h2>
-          {/* <img src={assets.twogear} alt="" 
-          className=" w-20  h-15 lg:w-156 lg:h-134"/> */}
+          <h2 className="text-white p-2"><span className="text-white p-2 text-bold text-3xl md:text-5xl">Graphic Designing</span> <br /> <span className=" text-black text-bold p-4">We Provide <br />  </span> <span className="text-white p-4 text-bold text-md md:text-xl">Best Graphics</span></h2>
+          <img src={assets.twogear} alt="" 
+          className=" w-20  h-15 lg:w-156 lg:h-134"/>
          </div>
+
+        
       <section className="py-4 px-6 md:px-12 bg-gradient-to-br from-gray-100 via-gray to-gray-100 text-white">
         <div className="max-w-7xl mx-auto text-center">
-          
+          <h2>Top Graphic Designs</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -26,53 +29,55 @@ const DSServicesPage = () => {
                 route: "/services/graphics",
               },
               {
-                title: "Video Editing",
+                title: "Graphic Designing",
                 description:
-                  "Editing and enhancing videos for professional and personal use, including film, television, and social media.",
-                image: `${assets.service1}`, // Path to the image
-                route: "/services/video",
+                  "Creating visually appealing designs for various purposes, such as logos, brochures, and social media posts.",
+                image: `${assets.graphic}`, // Path to the image
+                route: "/services/graphics",
               },
               {
-                title: "Content Writing",
+                title: "Graphic Designing",
                 description:
-                  "Crafting compelling and informative content for websites, blogs, articles, and marketing materials.",
-                image: `${assets.service3}`, // Path to the image
-                route: "/services/content",
+                  "Creating visually appealing designs for various purposes, such as logos, brochures, and social media posts.",
+                image: `${assets.graphic}`, // Path to the image
+                route: "/services/graphics",
               },
               {
-                title: "Web Development",
-                description: "Designing and developing websites for businesses.",
-                image: `${assets.service4}`, // Path to the image
-                route: "/services/web",
+                title: "Graphic Designing",
+                description:
+                  "Creating visually appealing designs for various purposes, such as logos, brochures, and social media posts.",
+                image: `${assets.graphic}`, // Path to the image
+                route: "/services/graphics",
               },
               {
-                title: "App Development",
+                title: "Graphic Designing",
                 description:
-                  "Developing mobile applications for iOS and Android.",
-                image: `${assets.servicemob}`, // Path to the image
-                route: "/services/app",
+                  "Creating visually appealing designs for various purposes, such as logos, brochures, and social media posts.",
+                image: `${assets.graphic}`, // Path to the image
+                route: "/services/graphics",
               },
               {
-                title: "UI/UX Design",
+                title: "Graphic Designing",
                 description:
-                  "Designing user-friendly and visually appealing interfaces for websites and applications.",
-                image: `${assets.ui2}`, // Path to the image
-                route: "/services/ui",
+                  "Creating visually appealing designs for various purposes, such as logos, brochures, and social media posts.",
+                image: `${assets.graphic}`, // Path to the image
+                route: "/services/graphics",
               },
               {
-                title: "Influencer Marketing",
+                title: "Graphic Designing",
                 description:
-                  "Collaborating with influencers to promote your brand and reach a wider audience.",
-                image: `${assets.influencer}`, // Path to the image
-                route: "/services/influencer",
+                  "Creating visually appealing designs for various purposes, such as logos, brochures, and social media posts.",
+                image: `${assets.graphic}`, // Path to the image
+                route: "/services/graphics",
               },
               {
-                title: "Meta & Google Ads",
+                title: "Graphic Designing",
                 description:
-                  "Managing and optimizing ad campaigns on Meta (Facebook, Instagram) and Google platforms.",
-                image: `${assets.metaadd}`, // Path to the image
-                route: "/services/meta",
+                  "Creating visually appealing designs for various purposes, such as logos, brochures, and social media posts.",
+                image: `${assets.graphic}`, // Path to the image
+                route: "/services/graphics",
               },
+              
             ].map((service, index) => (
               <div
                 key={index}
@@ -90,17 +95,17 @@ const DSServicesPage = () => {
                 </h3>
                 <p className="text-gray-800">{service.description}</p>
                 <Link
-                  to={service.route} // Use the route property
+                  to="/DSContact" // Use the route property
                   className="inline-block w-full mt-4 bg-yellow-400 text-white font-bold py-2 px-4 rounded hover:bg-yellow-600 transition-all duration-300"
                 >
-                  Know More
+                  Contact Us
                 </Link>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Let's Start Button Section */}
+        {/* Let's Start Button Section
         <div className="text-center mt-16">
           <h3 className="text-3xl font-semibold text-transparent bg-clip-text bg-red-500 mb-6">
             Ready to take the next step?
@@ -113,7 +118,7 @@ const DSServicesPage = () => {
               Let's Start
             </button>
           </Link>
-        </div>
+        </div> */}
       </section>
       <div className="py-10 bg-gray-100"></div>
       <DSFooter />
@@ -121,4 +126,4 @@ const DSServicesPage = () => {
   );
 };
 
-export default DSServicesPage;
+export default DSGraphicDesign;

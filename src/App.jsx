@@ -26,6 +26,14 @@ import DSUpiOption from "./DSpages/DSUpiOption";
 import DSCart from "./DSpages/DSCart";
 import DSContactUs from "./DSpages/DSContactUs";
 import DSServicesPage from "./DSpages/DSServicesPage";
+import DSGraphicDesign from "./DSpages/DSGraphicDesign";
+import DSVideoEditing from "./DSpages/DSVideoEditing";
+import DSContentWriting from "./DSpages/DSContentWriting";
+import DSWebDevelopment from "./DSpages/DSWebDevlopment";
+import DSApp from "./DSpages/DSApp";
+import DSUiUx from "./DSpages/DSUiUx";
+import DSInfluencerMarketing from "./DSpages/DSInfulencerMarketing";
+import DSMetaAds from "./DSpages/DSMetaAds";
 
 
 // LoadingScreen Component: Displayed while the app is loading
@@ -94,6 +102,15 @@ const App = () => {
           <Route path="/UpiOption" element={<DSUpiOption />} />
           <Route path="/dscart" element={<DSCart />} />
           <Route path="/DSContact" element={<DSContactUs />} />
+          <Route path="/services/graphics" element={<DSGraphicDesign />} />
+          <Route path="/services/video" element={<DSVideoEditing />} />
+          <Route path="/services/content" element={<DSContentWriting />} />
+          <Route path="/services/web" element={<DSWebDevelopment />} />
+          <Route path="/services/app" element={<DSApp />} />
+          <Route path="/services/ui" element={<DSUiUx />} />
+          <Route path="/services/influencer" element={<DSInfluencerMarketing />} />
+          <Route path="/services/meta" element={<DSMetaAds />} />
+
           
 
         </Routes>

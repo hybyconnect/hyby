@@ -29,6 +29,16 @@ import mawlanding2 from './mawlanding2.png';
 import emailEnv from './emailEnv.png';
 import percent from './percent.png';
 import robot from './robot.png';
+import servicemob from './servicemob.png';
+import service4 from './service4.png';
+import service3 from './service3.png';
+import service2 from './service2.png';
+import service1 from './service1.png';
+import graphic from './graphic.png';
+import twogear from './twogear.png';
+import influencer from './influencer.png';
+import metaadd from './metaadd.png';
+
 
 const assets = {
     influencer1,
@@ -62,6 +72,15 @@ const assets = {
     emailEnv,
     percent,
     robot,
+    servicemob,
+    service4,
+    service3,
+    service2,
+    service1,
+    graphic,
+    twogear,
+    influencer,
+    metaadd,
 
 };
 
